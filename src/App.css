@@ -70,19 +70,7 @@
     border-radius: 10px; /* Adjust the value to make the edges more or less round */
     padding: 20px; /* Adjust the value to add more or less padding */
   }
-  .autoRotate{
-    /* animation: autoRotateAnimation 3s linear infinite; */
-    /* animation-timeline: view(); */
-    animation: autoShowAnimation both;
-}
-@keyframes autoRotateAnimation{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
+
 .autoShow{
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
