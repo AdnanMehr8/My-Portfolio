@@ -11,6 +11,7 @@ const AdminProjects = () => {
     const [showAddEditModal, setShowAddEditModal] = React.useState(false);
     const [selectedItemForEdit, setSelectedItemForEdit] = React.useState(null);
     const [type, setType] = React.useState("add");
+    const [photo, setPhoto] = React.useState('');
 
     const onFinish = async (values) => {
         try {
@@ -70,6 +71,15 @@ const AdminProjects = () => {
             message.error(error.message)
         }
     };
+      const getPhoto = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.readAsDataURL(file);
+        reader.onloadend = () => {
+            setPhoto(reader.result);
+        }
+    }
 
     return (
         <div>
@@ -130,8 +140,12 @@ const AdminProjects = () => {
                         <Form.Item name='title' label='Title'>
                             <input placeholder='Title' />
                         </Form.Item>
-                        <Form.Item name='image' label='Image URL'>
-                            <input placeholder='Image URL' />
+                        // <Form.Item name='image' label='Image URL'>
+                        //     <input placeholder='Image URL' />
+                        // </Form.Item>
+                             <Form.Item name='image' label='Image'>
+                            <input type="file" onChange={getPhoto} placeholder='Image' />
+                            {photo && <img src={photo} 
                         </Form.Item>
                         <Form.Item name='description' label='Description'>
                             <textarea placeholder='Description' />
