@@ -71,16 +71,6 @@ const AdminProjects = () => {
             message.error(error.message)
         }
     };
-      const getPhoto = (e) => {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-
-        reader.readAsDataURL(file);
-        reader.onloadend = () => {
-            setPhoto(reader.result);
-        }
-    }
-
     return (
         <div>
             <div className='flex justify-end'>
@@ -143,10 +133,10 @@ const AdminProjects = () => {
                         // <Form.Item name='image' label='Image URL'>
                         //     <input placeholder='Image URL' />
                         // </Form.Item>
-                             <Form.Item name='image' label='Image'>
-                            <input type="file" onChange={getPhoto} placeholder='Image' />
-                            {photo && <img src={photo} 
-                        </Form.Item>
+                        //      <Form.Item name='image' label='Image'>
+                        //     <input type="file" onChange={getPhoto} placeholder='Image' />
+                        //     {photo && <img src={photo} 
+                        // </Form.Item>
                         <Form.Item name='description' label='Description'>
                             <textarea placeholder='Description' />
                         </Form.Item>
