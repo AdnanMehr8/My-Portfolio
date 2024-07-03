@@ -1,211 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-
-    overflow-wrap: break-word;
-   
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  overflow-wrap: break-word;
 }
 
-/* width */
 ::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: #0A192F;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #0a1b1e; 
-    border-radius: 10px;
-  }
-  
-  
-  /* Handle on hover
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0a1b1e; 
-  } */
+  width: 6px;
+}
 
-  i{
-    cursor: pointer;
-  }
-  i:hover {
-    color: #f5f5f5;
-  }
+::-webkit-scrollbar-track {
+  background-color: #0A192F;
+}
 
-  /* Loader animation */
-  .a {
-    animation: a 1s infinite;
-  }
-  
-  @keyframes a {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .h {
-    animation: h 1s infinite;
-  }
-  
-  @keyframes h {
-    0% {
-      opacity: 0.5;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
+::-webkit-scrollbar-thumb {
+  background: #0a1b1e; 
+  border-radius: 10px;
+}
 
-  /* Input */
+i {
+  cursor: pointer;
+}
 
-  input, textarea {
-    height: 40px;
-    border: 1px solid gray;
-    width: 80%;
-    padding-left: 20px;
-  }
+i:hover {
+  color: #f5f5f5;
+}
 
-  input:focus {
-    outline: none;
-    border: 2px solid gray;
-  }
+.a {
+  animation: a 1s infinite;
+}
 
-  textarea{
-    height: 100px;
-    padding: 10px;
+@keyframes a {
+  0% {
+    opacity: 1;
   }
-  
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  50% {
+    opacity: 0.5;
   }
-  body{
-    background-color: #D2D2D2;
-    scroll-behavior: smooth;
-    /* background-image: url(/public/model.png); */
-    background-image:
+  100% {
+    opacity: 1;
+  }
+}
+
+.h {
+  animation: h 1s infinite;
+}
+
+@keyframes h {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+input, textarea {
+  height: 40px;
+  border: 1px solid gray;
+  width: 80%;
+  padding-left: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid gray;
+}
+
+textarea {
+  height: 100px;
+  padding: 10px;
+}
+
+body {
+  background-color: #D2D2D2;
+  scroll-behavior: smooth;
+  background-image:
     repeating-linear-gradient(
-        to right, transparent 0 100px,
-        #25283b22 100px 101px
+      to right, transparent 0 100px,
+      #25283b22 100px 101px
     ),
     repeating-linear-gradient(
-        to bottom, transparent 0 100px,
-        #25283b22 100px 101px
+      to bottom, transparent 0 100px,
+      #25283b22 100px 101px
     );
-  }
-  
-
-   body::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    content: '';
-    background-image: url(/public/model.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    pointer-events: none;
-    z-index: -1;
-  }
-  
-  body::after {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    content: '';
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-    pointer-events: none;
-    z-index: -1;
-  }
-  
-  /* .tab{
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    background-image: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.3),
-      rgba(0, 0, 0, 0.2)
-    );
-    background-size: 10px;
-  } */
-  .tab {
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    background-image: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.3),
-      rgba(0, 0, 0, 0.2)
-    );
-    background-size: 10px;
-    border-radius: 10px; /* Adjust the value to make the edges more or less round */
-    padding: 20px; /* Adjust the value to add more or less padding */
-  }
-
-.autoShow{
-    animation: autoShowAnimation both;
-    animation-timeline: view(70% 5%);
-
 }
-@keyframes autoShowAnimation{
-    from{
-        opacity: 0;
-        transform: translateY(200px) scale(0.3);
-    }to{
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: '';
+  background-image: url(/public/model.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: -1;
 }
-.autoBLur{
-    animation: autoBLurAnimation ease-in-out;
-    animation-timeline: view();
+
+body::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: -1;
 }
-/* @keyframes autoBLurAnimation{
-    0%{
-        filter: blur(10px);
-    }
-    65%, 80%{
-      filter: blur(0px);
-    }
 
-    90%{
-      filter: blur(10px);
-    }
-} */
+.tab {
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 10px;
+  border-radius: 10px;
+  padding: 20px;
+}
 
+.autoShow {
+  animation: autoShowAnimation 1s both;
+}
 
-@keyframes autoBLurAnimation{
-  0%{
-      filter: blur(10px);
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
   }
-  85%, 95%{
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.autoBlur {
+  animation: autoBlurAnimation 1s ease-in-out;
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(10px);
+  }
+  85%, 95% {
     filter: blur(0px);
   }
-
-  100%{
+  100% {
     filter: blur(10px);
   }
 }
