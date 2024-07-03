@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <div>
-      <div className='tab autoShow'>
+      <div className='tab animate-autoShow'>
         <div className='autoShow'>
           <SectionTitle title="About" />
         </div>
