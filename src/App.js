@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import Admin from './pages/Admin';
 import Login from './pages/Admin/Login';
-import './App.css';
+
 axios.defaults.baseURL = 'https://mern-portfolio-backend-opal.vercel.app/';
 function App() {
   const { loading, portfolioData, reloadData } = useSelector(state => state.root);
