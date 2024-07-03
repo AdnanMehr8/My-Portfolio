@@ -9,6 +9,21 @@ module.exports = {
   },
   theme: {
     extend: {
+      keyframes: {
+        autoShowAnimation: {
+          '0%': { opacity: '0', transform: 'translateY(200px) scale(0.3)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+        autoBLurAnimation: {
+          '0%': { filter: 'blur(10px)' },
+          '85%, 95%': { filter: 'blur(0px)' },
+          '100%': { filter: 'blur(10px)' },
+        },
+      },
+      animation: {
+        autoShow: 'autoShowAnimation both',
+        autoBLur: 'autoBLurAnimation ease-in-out',
+      },
       colors: {
         // "primary": "#0A192F",
         // "primary": "#12343b",
