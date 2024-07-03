@@ -1,0 +1,30 @@
+export const courses = [
+    {
+        title: "ksjfkdjfv",
+        description: "",
+        image:
+            "ewknv.png",
+        link: "/",
+    },
+    {
+        title: "ksjfkdjfv",
+        image:
+        "ewknv.png",
+        description: "",
+        link: "/",
+    },
+    {
+        title: "ksjfkdjfv",
+        description: "",
+        image:
+            "ewknv.png",
+        link: "/",
+    },
+    {
+        title: "ksjfkdjfv",
+        description: "",
+        image:
+            "ewknv.png",
+        link: "/",
+    },
+]
