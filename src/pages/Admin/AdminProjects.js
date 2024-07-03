@@ -11,7 +11,7 @@ const AdminProjects = () => {
     const [showAddEditModal, setShowAddEditModal] = React.useState(false);
     const [selectedItemForEdit, setSelectedItemForEdit] = React.useState(null);
     const [type, setType] = React.useState("add");
-    // const [photo, setPhoto] = React.useState('');
+  
 
     const onFinish = async (values) => {
         try {
@@ -133,10 +133,6 @@ const AdminProjects = () => {
                         <Form.Item name='image' label='Image URL'>
                             <input placeholder='Image URL' />
                         </Form.Item>
-                        //      <Form.Item name='image' label='Image'>
-                        //     <input type="file" onChange={getPhoto} placeholder='Image' />
-                        //     {photo && <img src={photo} 
-                        // </Form.Item>
                         <Form.Item name='description' label='Description'>
                             <textarea placeholder='Description' />
                         </Form.Item>
