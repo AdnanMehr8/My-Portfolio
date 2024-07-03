@@ -8,6 +8,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import LeftSider from './LeftSider';
+import '../../index.css'; 
 
 const Home = () => {
   const { portfolioData } = useSelector(state => state.root);
