@@ -5,6 +5,7 @@
   }
   body{
     background-color: #D2D2D2;
+    scroll-behavior: smooth;
     /* background-image: url(/public/model.png); */
     background-image:
     repeating-linear-gradient(
